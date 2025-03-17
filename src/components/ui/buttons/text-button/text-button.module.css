@@ -1,0 +1,12 @@
+.wrapper {
+  translate: 0 0;
+  transition: var(--transition);
+  color: var(--c-primary);
+}
+.wrapper:hover {
+  color: var(--c-primary-hover);
+}
+.wrapper:active {
+  translate: 0 2px;
+  color: var(--c-primary-click);
+}

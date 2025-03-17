@@ -1,0 +1,82 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-1);
+  transition: var(--transition);
+  color: #fff;
+}
+.wrapper span {
+  position: relative;
+}
+.wrapper.big {
+  width: 280px;
+  height: 56px;
+}
+.wrapper.small {
+  width: 288px;
+  height: 40px;
+}
+.wrapper.big {
+  height: 56px;
+}
+.wrapper.red {
+  background: var(--gradient);
+}
+.wrapper.red::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-1);
+  background: var(--c-btn-red-hover);
+  opacity: 0;
+  transition: var(--transition);
+}
+.wrapper.red:hover:before {
+  opacity: 1;
+}
+.wrapper.red:disabled {
+  background: var(--c-disabled) !important;
+}
+.wrapper.stroked {
+  background: var(--gradient);
+  border: 1px solid #fff;
+}
+.wrapper.stroked::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-1);
+  background: #fff;
+  opacity: 0;
+  transition: var(--transition);
+}
+.wrapper.stroked:hover {
+  color: #000;
+}
+.wrapper.stroked:hover:before {
+  opacity: 1;
+}
+.wrapper.stroked:disabled {
+  background: var(--c-disabled) !important;
+  border-color: var(--c-disabled);
+}
+.wrapper:active {
+  translate: 0 2px;
+}
+.wrapper:disabled {
+  pointer-events: none;
+}
+.loader {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 575px) {
+  .wrapper.big {
+    width: 149px;
+    height: 40px;
+    font-size: 0.75rem;
+  }
+}

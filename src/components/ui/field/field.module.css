@@ -1,0 +1,22 @@
+.wrapper {
+}
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #dfe3e6;
+  border-radius: 3px;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  font-family: LabGrotesque, sans-serif;
+}
+.input::placeholder {
+  color: #bec5cc;
+}
+.input:focus {
+  outline: 0;
+  border-color: #000;
+}
+.input.error {
+  border-color: #ea0029;
+}
